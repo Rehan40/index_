@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order Food At Home</title>
+	<link rel="icon" type="text/css" href="https://img.icons8.com/doodle/50/000000/hamburger.png"/>
+	<style>
+		body{
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.image{
+			display: flex;
+			position: relative;
+			width: 305px;
+			height: 205px;
+			padding: 25px;
+			border: solid #43E628;
+			font-size: 17px;
+		}
+		.image__img{
+			display: block;
+			width: 100%;
+		}
+
+		.image__overlay{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 93%;
+			height: 90%;
+			background-color: rgba(0, 0, 0, 0.6);
+			color: white;
+			font-family: 'Quicksand', sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			transition: opacity 0.25s;
+		}
+
+		.image__overlay:hover{
+			opacity: 1;
+		}
+
+		.image__title{
+			size: 2em;
+			font-weight: bold;
+		}
+
+		.image__description{
+			font-size: 1.15em;
+			margin-top: 0.25em;
+		}
+        .lunch{
+        	margin-left: 115px;
+            margin-top: -28px;
+        	align-items: center;
+        }
+        .hello{
+        	float: left;
+        	margin-right: -20px;
+        	margin-top: 90px;
+        }
+
+        .dinner{
+        float: right;
+        display: flex;
+        align-items: right;
+        margin-right: -450px;
+        margin-top: -261px;
+        }
+
+        .p1{
+        	display: flex;
+        	color: white;
+        }
+
+        .f1{
+        	margin-left: 70px;
+        }
+
+        .f2{
+         margin-left: 300px;
+
+        }
+        
+        .f3{
+        	margin-left: 310px;
+        }
+
+        .t1{
+        	margin-left: 60px;
+        	font-size: 20px;
+        }
+        p{
+        	color: white;
+        }
+
+	</style>
+</head>
+<body background="smoke.jpg">
+<section class="container">
+
+     
+	<div class="image" class="hello">
+	<img class="image__img" src="break.jpg" alt="breakfast" class="h1">
+	<div class="image__overlay">
+		<div class="image__title">Breakfast Combo</div>
+		<a href="breakfast.html"><p class="image__description"><u>Order Yor Breakfast Meal Now</u></p></a>
+	</div>
+	
+
+
+
+
+<div class="lunch">
+<div class="image">
+	<img class="image__img" src="burger.png" alt="Lunch">
+	<div class="image__overlay">
+		<div class="image__title">Lunch Combo</div>
+		<a href="lunch.html"><p class="image__description"><u>Order Yor Lunch Meal Now</u></p></a>
+	</div>
+</div>
+
+
+<div class="dinner">
+<div class="image">
+	<img class="image__img" src="nugget.jpg" alt="
+	Dinner" class="h1">
+	<div class="image__overlay">
+		<div class="image__title">Dinner Combo</div>
+		<a href="dinner.html"><p class="image__description"><u>Order Yor Dinner Meal Now</u></p></a>
+	</div>
+	</div>
+	</section>
+
+<div class="p1">
+<div class="f1">
+	<h2><b>Breakfast Combo</b></h2>
+		<p class="t1">₹350</p>
+		</div>
+
+
+		<div class="f2">
+			<h2><b>Lunch Combo</b></h2>
+			<p class="t1">₹399</p>
+		</div>
+
+
+		<div class="f3">
+			<h2><b>Dinner Combo</b></h2>
+			<p class="t1">₹420</p>
+		</div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table Reservation</title>
+    <link rel="icon" type="text/css" href="https://img.icons8.com/doodle/50/000000/hamburger.png"/>
+	<style>
+		 table{
+            border: solid 4px #F7DA19;
+            width: 599px;
+        }
+        tr{
+            border: solid 3px rgb(54, 176, 253);
+            text-align: center;
+        }
+		body{
+         background-repeat: no-repeat;
+         background-size: 99.9%;
+		}
+		.h1{
+			color: #17CDE3;
+			text-align: center;
+		}
+		.box{
+			text-align: center;
+            font-size: 22.5px;
+            color: #52EB16;
+            background-color: black;
+            margin-left:330px; 
+            margin-right:295px;
+            opacity: 0.9px;
+            padding: 15px;
+		}
+        h1{
+            color: darkgrey;
+        }
+        .g1{
+            text-decoration: none; 
+            text-align: center;
+            border: solid #52EB16;
+            color: #19F6F9;
+            margin-left: 560px;
+            margin-right: 560px;
+            background-color: black;
+        }
+        .g1:hover{
+            background-color: #F6DD0B;
+            color: #070707;
+            border: solid #B520F3;
+        }
+        input::placeholder{
+            background-color: #F00854;
+            color: black;
+        }
+	</style>
+</head>
+<center>
+<body background="food.jpg">
+	<script class="function">
+		function validate(){
+            //validation for full name
+            var name=document.form.fn.value;
+            if(name==""){
+                document.getElementById("fnv").innerHTML="*Please enter your full name.";
+                document.form.fn.focus();
+                return false;
+            }
+            else{
+                document.getElementById("fnv").innerHTML="";
+            }
+             //validation for email
+            var email=document.form.email.value;
+            var atpos=email.indexOf("@");
+            var dotpos=email.lastIndexOf(".");
+            if(email==""){
+                document.getElementById("emv").innerHTML="*Please enter your E-mail adress.";
+                document.form.email.focus();
+                return false;
+            }
+            if(atpos<1||(dotpos-atpos<2)){
+                document.getElementById("emv").innerHTML="Invalid E-mail";
+                document.form.email.focus();
+                return false
+            }
+            else{
+                document.getElementById("emv").innerHTML="";
+            }
+            //validation for mobile
+            var mobile=document.form.number.value;
+            if(mobile==""){
+                document.getElementById("nv").innerHTML="*Please enter a mobile number."
+                document.form.number.focus();
+                return false;
+            }
+            else if(mobile.length!=10||isNaN(mobile)){
+                document.getElementById("nv").innerHTML="*Please enter a valid mobile number."
+                document.form.number.focus();
+                return false;
+            }
+            else{
+                document.getElementById("nv").innerHTML="";
+            }
+             return true;
+        }
+	</script>
+	<div>
+	<h1 style="color: #26E4DD; font-family: arial;">To Make a Reservation Please Register Below!</h1>
+</div>
+<br>
+<br>
+<br>
+ 
+<div class="box">
+	<center>
+<form name="form" onsubmit="return(validate())" onsubmit="f6">
+        <table>
+            <tr>
+                <td>Full Name:</td>
+                <td><input type="text" name="fn" size="40" placeholder="Full Name"></td>
+                <td id="fnv" class="error"></td>
+            </tr>
+            <tr>
+                <td>E-mail:</td>
+                <td><input type="text" name="email" size="40" placeholder="E-mail"></td>
+                <td id="emv" class="error"></td>
+            </tr>
+            <tr>
+                <td>Mobile Number:</td>
+                <td><input type="text" name="number" maxlength="10" size="40" placeholder="Mobile Number"></td>
+                <td id="nv" class="error"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="pass" size="40" placeholder="Password"></td>
+                <td id="pwv" class="error"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type="password" name="pass2" size="40" placeholder="Confirm Password"></td>
+                <td id="cpv" class="error"></td>
+            </tr>
+            <tr>
+                <td>Select Date:</td>
+                <td><input type="date" name="pin" size="40" placeholder></td>
+                <td id="pv" class="error"></td>
+            </tr>
+            <tr>
+            
+                <td><input type="Reset" name="Reset" value="Reset"></td>
+            </tr>
+            <tr><td><input type="submit" name="">
+            </td>
+        </tr>
+    </form>
+    </table>
+    </center>
+</div>
+</div>
+<br>
+<br>
+<br>
+<a href="thank.html"><h2 class="g1">Next</h2></a>
+</body>
+</html>
